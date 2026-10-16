@@ -165,12 +165,12 @@ window.PROFILE = {
   ],
 
   // -- Open-source projects ---------------------------------------------------
-  // projects: [
-  //   { name: "sae-kit", tagline: "Train & inspect sparse autoencoders at scale", description: "A batteries-included toolkit for training sparse autoencoders on production-scale transformer activations, with first-class support for feature circuit tracing and activation steering experiments.", tags: ["PyTorch", "Interpretability", "Open Source"], url: "#", stars: "3.4k" },
-  //   { name: "OpenArena", tagline: "Reproducible evals for agentic models", description: "A version-pinned, sandboxed evaluation ecosystem of 320 agentic tasks. Designed so any capability claim can be independently reproduced with a single command.", tags: ["Evaluation", "Agents", "Reproducibility"], url: "#", stars: "2.1k" },
-  //   { name: "refusal-probe", tagline: "Geometry of refusal in instruction-tuned models", description: "Reference implementation and notebooks for probing, steering, and ablating refusal directions across model families. Reproduces all figures from our EMNLP paper.", tags: ["Probing", "Safety", "Notebooks"], url: "#", stars: "980" },
-  //   { name: "vh-detector", tagline: "Sub-1ms hallucination detector for VLMs", description: "An activation-based detector for object hallucinations in vision-language models, drop-in to most HF VLM generation loops.", tags: ["VLMs", "Tooling"], url: "#", stars: "640" },
-  // ],
+  projects: [
+    { name: "sae-kit", tagline: "Train & inspect sparse autoencoders at scale", description: "A batteries-included toolkit for training sparse autoencoders on production-scale transformer activations, with first-class support for feature circuit tracing and activation steering experiments.", tags: ["PyTorch", "Interpretability", "Open Source"], url: "#", stars: "3.4k" },
+    { name: "OpenArena", tagline: "Reproducible evals for agentic models", description: "A version-pinned, sandboxed evaluation ecosystem of 320 agentic tasks. Designed so any capability claim can be independently reproduced with a single command.", tags: ["Evaluation", "Agents", "Reproducibility"], url: "#", stars: "2.1k" },
+    { name: "refusal-probe", tagline: "Geometry of refusal in instruction-tuned models", description: "Reference implementation and notebooks for probing, steering, and ablating refusal directions across model families. Reproduces all figures from our EMNLP paper.", tags: ["Probing", "Safety", "Notebooks"], url: "#", stars: "980" },
+    { name: "vh-detector", tagline: "Sub-1ms hallucination detector for VLMs", description: "An activation-based detector for object hallucinations in vision-language models, drop-in to most HF VLM generation loops.", tags: ["VLMs", "Tooling"], url: "#", stars: "640" },
+  ],
 
   // -- Teaching ---------------------------------------------------------------
   // teaching: [
