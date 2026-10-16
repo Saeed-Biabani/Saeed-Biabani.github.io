@@ -19,7 +19,7 @@ window.PROFILE = {
   // -- Copy -------------------------------------------------------------------
   
    shortBio:
-     "I am an undergraduate student and AI researcher at Mazandaran University of Science and Technology, with research interests in large language models, computer vision, representation learning, and knowledge-enhanced reasoning. I am particularly interested in developing intelligent systems that can learn meaningful representations, integrate structured knowledge, and reason across diverse forms of information.",
+     "I am an undergraduate AI researcher at Mazandaran University of Science and Technology, interested in large language models, world models, representation learning, knowledge graphs, and multimodal AI.",
    longBio: [
      "I am an undergraduate student at Mazandaran University of Science and Technology and a member of the Machine Learning and Computer Vision Research Lab. My research interests lie in artificial intelligence and deep learning, particularly large language models (LLMs), natural language processing (NLP), computer vision, and representation learning. I am interested in understanding how intelligent systems learn from data, acquire meaningful representations, and generalize to complex and unfamiliar problems.",
      "My research interests also extend to knowledge-enhanced artificial intelligence, including knowledge graphs, retrieval-augmented generation (RAG), and reasoning over structured and unstructured information. I am particularly interested in bridging neural representation learning with structured knowledge and exploring architectures that enable more effective reasoning, generalization, and adaptation across different tasks and domains.",
