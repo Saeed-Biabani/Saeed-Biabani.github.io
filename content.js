@@ -28,7 +28,7 @@ window.PROFILE = {
 
 
   // -- Links ------------------------------------------------------------------
-  cvUrl: "#",
+  cvUrl: "https://github.com/Saeed-Biabani/Resume/blob/main/resume-lab.pdf",
   scholarUrl: "https://scholar.google.com/citations?user=AqXUFWwAAAAJ&hl=en",
   githubUrl: "https://github.com/Saeed-Biabani",
   linkedinUrl: "https://www.linkedin.com/in/saeed-biabani-mahalli-b3604a225/",
