@@ -1,30 +1,316 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Saeed Biabani — AI and machine learning research portfolio.">
-<meta name="theme-color" content="#fafaf9">
-<title>Saeed Biabani — Research</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><script defer src="content.js"></script><script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Adrian Cole — AI Researcher</title>
+  <meta name="description" content="Personal website of Dr. Adrian Cole, AI researcher working on large language models, alignment, and interpretability. Publications, projects, teaching, and contact." />
+  <meta name="keywords" content="AI researcher, machine learning, large language models, AI alignment, interpretability, publications" />
+  <meta name="author" content="Adrian Cole" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dr. Adrian Cole — AI Researcher" />
+  <meta property="og:description" content="Research on large language models, alignment, and interpretability. Publications, projects, and teaching." />
+  <meta property="og:type" content="profile" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dr. Adrian Cole — AI Researcher" />
+  <meta name="twitter:description" content="Research on large language models, alignment, and interpretability." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Content data (edit this file to make the site yours) -->
+  <script src="content.js" defer></script>
+  <!-- App logic -->
+  <script src="script.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
-<header class="top"><a class="wordmark" href="#home">Saeed Biabani<span>.</span></a><nav aria-label="Primary"><a href="#about">About</a><a href="#research">Research</a><a href="#publications" data-nav="publications">Publications</a><a href="#experience" data-nav="experience">Experience</a><a href="#projects" data-nav="projects">Projects</a><a href="#teaching" data-nav="teaching">Teaching</a><a href="#contact">Contact</a></nav><button id="theme" aria-label="Switch color theme" title="Switch theme">◐</button></header>
-<main id="main">
-<section class="hero" id="home"><div class="eyebrow">RESEARCH / ARTIFICIAL INTELLIGENCE</div><h1>Curiosity, <em>translated</em><br>into research.</h1><p id="shortbio" class="intro"></p><div id="primary-links" class="links"></div></section>
-<section class="section" id="about"><div class="side">01 / ABOUT</div><div class="section-main"><h2>About me<span class="period">.</span></h2><div id="bio"></div><div id="meta" class="meta"></div></div></section>
-<section class="section" id="research"><div class="side">02 / RESEARCH</div><div class="section-main"><h2>Research interests<span class="period">.</span></h2><div id="interests" class="entry-list"></div></div></section>
-<section class="section optional" id="publications"><div class="side">03 / PUBLICATIONS</div><div class="section-main"><h2>Selected publications<span class="period">.</span></h2><div id="publication-list" class="entry-list"></div></div></section>
-<section class="section optional" id="experience"><div class="side">04 / EXPERIENCE</div><div class="section-main"><h2>Experience & education<span class="period">.</span></h2><div id="experience-list" class="entry-list"></div></div></section>
-<section class="section optional" id="projects"><div class="side">05 / PROJECTS</div><div class="section-main"><h2>Selected projects<span class="period">.</span></h2><div id="project-list" class="entry-list"></div></div></section>
-<section class="section optional" id="teaching"><div class="side">06 / TEACHING</div><div class="section-main"><h2>Teaching<span class="period">.</span></h2><div id="teaching-list" class="entry-list"></div></div></section>
-<section class="section optional" id="news"><div class="side">07 / NEWS</div><div class="section-main"><h2>Recent notes<span class="period">.</span></h2><div id="news-list" class="entry-list"></div></div></section>
-<section class="section contact" id="contact"><div class="side">/ CONTACT</div><div class="section-main"><h2>Let's connect<span class="period">.</span></h2><p>Open to conversations about research, ideas, and collaborations.</p><div id="contact-links" class="links"></div></div></section>
-</main><footer><span>© <span id="year"></span> Saeed Biabani</span><a href="#home">Back to top ↑</a></footer>
-</div>
-</body></html>
+  <!-- ===================================================================
+       Header
+       ==================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <button class="brand" id="brandBtn" type="button" aria-label="Back to top">
+        <span class="brand__mark" id="brandMark">AC</span>
+        <span class="brand__name" id="brandName"></span>
+      </button>
+      <nav class="nav" id="mainNav" aria-label="Primary navigation"></nav>
+      <div class="header-actions">
+        <button class="btn btn--icon" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+        <button class="btn btn--icon menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu"></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <div class="container">
+        <nav class="mobile-nav__inner" id="mobileNavInner" aria-label="Mobile navigation"></nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =================================================================
+         Hero
+         ================================================================= -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__glow-a" aria-hidden="true"></div>
+      <div class="hero__glow-b" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__grid">
+          <div class="hero__main">
+            <span class="badge">
+              <span class="dot" aria-hidden="true"></span>
+              Open to collaboration &amp; speaking
+            </span>
+            <h1 class="hero__title" id="heroTitle"></h1>
+            <p class="hero__subtitle" id="heroSubtitle"></p>
+            <p class="hero__lede" id="heroLede"></p>
+            <div class="hero__actions" id="heroActions"></div>
+            <div class="hero__stats" id="heroStats"></div>
+          </div>
+          <div class="hero__avatar-wrap">
+            <div class="avatar">
+              <div class="avatar__halo" aria-hidden="true"></div>
+              <div class="avatar__card">
+                <span class="avatar__initials" id="avatarInitials">AC</span>
+                <span class="avatar__affil" id="avatarAffil"></span>
+                <span class="avatar__loc" id="avatarLoc"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-cue">
+          <button class="scroll-cue__btn" id="scrollCue" type="button" aria-label="Scroll to about">
+            <span>Scroll</span>
+            <svg class="scroll-cue__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         About
+         ================================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__row">
+            <span class="section-head__index">01</span>
+            <span class="section-head__line" aria-hidden="true"></span>
+            <h2 class="section-head__title">About</h2>
+          </div>
+          <p class="section-head__desc">A short introduction, what I work on, and what I care about.</p>
+        </div>
+        <div class="about__grid">
+          <div class="about__bio">
+            <div id="bioParagraphs"></div>
+            <dl class="about__meta" id="aboutMeta"></dl>
+          </div>
+          <aside class="news-card">
+            <h3 class="news-card__title">
+              <span class="news-card__dot" aria-hidden="true"></span>
+              Recent news
+            </h3>
+            <ol class="news-list" id="newsList"></ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Research interests
+         ================================================================= -->
+    <section class="section" id="research">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__row">
+            <span class="section-head__index">02</span>
+            <span class="section-head__line" aria-hidden="true"></span>
+            <h2 class="section-head__title">Research Interests</h2>
+          </div>
+          <p class="section-head__desc">
+            My research spans four intersecting threads. The unifying goal: make frontier models more transparent, steerable, and honestly evaluated.
+          </p>
+        </div>
+        <div class="research-grid" id="researchGrid"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Publications
+         ================================================================= -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__row">
+            <span class="section-head__index">03</span>
+            <span class="section-head__line" aria-hidden="true"></span>
+            <h2 class="section-head__title">Publications</h2>
+          </div>
+          <p class="section-head__desc">
+            Selected works on alignment, interpretability, evaluation, and multimodal reasoning. Most include reproducible code and checkpoints.
+          </p>
+        </div>
+        <div class="pub-toolbar">
+          <div class="filters" id="pubFilters" role="tablist" aria-label="Filter publications by type"></div>
+          <div class="search">
+            <input type="search" id="pubSearch" placeholder="Search title, author, venue…" aria-label="Search publications" />
+          </div>
+        </div>
+        <div class="pub-list" id="pubList"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Experience & Education
+         ================================================================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__row">
+            <span class="section-head__index">04</span>
+            <span class="section-head__line" aria-hidden="true"></span>
+            <h2 class="section-head__title">Experience &amp; Education</h2>
+          </div>
+          <p class="section-head__desc">My path through research, residency, and graduate school.</p>
+        </div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Projects
+         ================================================================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__row">
+            <span class="section-head__index">05</span>
+            <span class="section-head__line" aria-hidden="true"></span>
+            <h2 class="section-head__title">Open-Source Projects</h2>
+          </div>
+          <p class="section-head__desc">
+            Tools and reference implementations I maintain or have contributed to. Everything here is open source.
+          </p>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Teaching & Service
+         ================================================================= -->
+    <section class="section" id="teaching">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__row">
+            <span class="section-head__index">06</span>
+            <span class="section-head__line" aria-hidden="true"></span>
+            <h2 class="section-head__title">Teaching &amp; Service</h2>
+          </div>
+          <p class="section-head__desc">Courses I've taught, plus reviewing and community work.</p>
+        </div>
+        <div class="teaching-grid">
+          <div>
+            <h3 class="subhead">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              Courses
+            </h3>
+            <ul class="courses" id="coursesList"></ul>
+          </div>
+          <div>
+            <h3 class="subhead">Service &amp; Reviewing</h3>
+            <ul class="service-list" id="serviceList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Contact
+         ================================================================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__row">
+            <span class="section-head__index">07</span>
+            <span class="section-head__line" aria-hidden="true"></span>
+            <h2 class="section-head__title">Get in touch</h2>
+          </div>
+          <p class="section-head__desc">
+            I'm always happy to discuss research, collaboration, mentoring, or speaking. Email is the most reliable way to reach me.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <p class="contact__cta">Let's talk about reliable, transparent AI.</p>
+            <p class="contact__desc">
+              Whether you have a paper to discuss, a student looking for mentorship, or an event to invite me to — my inbox is open. I aim to reply within a week.
+            </p>
+            <a class="contact__email" id="contactEmail" href="#">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span id="contactEmailText"></span>
+            </a>
+          </div>
+          <ul class="contact-links" id="contactLinks"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       Footer (sticky to bottom)
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer-brand">
+        <span class="footer-mark" id="footerMark">AC</span>
+        <div>
+          <p class="footer-name" id="footerName"></p>
+          <p class="footer-copy" id="footerCopy"></p>
+        </div>
+      </div>
+      <p class="footer-meta" id="footerMeta"></p>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       AI research assistant (optional; controlled by content.js)
+       ==================================================================== -->
+  <button class="assistant-launch" id="assistantLaunch" type="button" aria-label="Ask the research assistant" hidden>
+    <span class="assistant-launch__label" id="assistantLaunchLabel"></span>
+    <svg id="assistantLaunchIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.937 15.539A4 4 0 0 0 7.072 12.7L2 11.072 7.072 9.445A4 4 0 0 0 9.937 6.58L11.565 1.508 13.192 6.58A4 4 0 0 0 16.057 9.445L21.13 11.072 16.057 12.7a4 4 0 0 0-2.865 2.865L11.565 20.637z"/></svg>
+  </button>
+
+  <div class="assistant-panel is-hidden assistant-panel__enter" id="assistantPanel" role="dialog" aria-label="Research assistant">
+    <div class="assistant-head">
+      <div class="assistant-head__left">
+        <span class="assistant-head__avatar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+        </span>
+        <div>
+          <p class="assistant-head__name" id="assistantName">ARIA</p>
+          <p class="assistant-head__status">Research assistant</p>
+        </div>
+      </div>
+      <button class="assistant-head__close" id="assistantClose" type="button" aria-label="Close research assistant">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="assistant-body" id="assistantBody"></div>
+    <form class="assistant-form" id="assistantForm">
+      <textarea class="assistant-form__input" id="assistantInput" rows="1" placeholder="Ask about publications, research…" aria-label="Message"></textarea>
+      <button class="assistant-form__send" id="assistantSend" type="submit" aria-label="Send" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.106 1.106z"/><path d="m21.5 2.5-9.5 9.5"/></svg>
+      </button>
+    </form>
+  </div>
+
+  <noscript>
+    <p style="text-align:center;padding:2rem;">This site requires JavaScript to be enabled to display its content.</p>
+  </noscript>
+</body>
+</html>
