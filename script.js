@@ -82,7 +82,12 @@
   function richItem(record, mainKey, secondaryKey) {
     const box = el('div'); box.append(el('h3', '', record[mainKey] || ''));
     if (record[secondaryKey]) box.append(el('p', '', record[secondaryKey]));
-    if (record.venue || record.organization) box.append(el('p', '', record.venue || record.organization));
+    if (
+      record.venue && secondaryKey !== 'venue' ||
+      record.organization && secondaryKey !== 'organization' && !record.venue
+    ) {
+      box.append(el('p', '', record.venue || record.organization));
+    }
     if (record.description && secondaryKey !== 'description') box.append(el('p', '', record.description));
     if (Array.isArray(record.links) && record.links.length) {
       const links = el('div', 'entry-links'); record.links.forEach(({label, url}) => appendLink(links, label + ' ↗', url)); if (links.children.length) box.append(links);
