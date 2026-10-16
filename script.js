@@ -83,14 +83,37 @@
     const box = el('div'); box.append(el('h3', '', record[mainKey] || ''));
     if (record[secondaryKey]) box.append(el('p', '', record[secondaryKey]));
     if (record.venue || record.organization) box.append(el('p', '', record.venue || record.organization));
-    if (record.description) box.append(el('p', '', record.description));
+    if (record.description && secondaryKey !== 'description') box.append(el('p', '', record.description));
     if (Array.isArray(record.links) && record.links.length) {
       const links = el('div', 'entry-links'); record.links.forEach(({label, url}) => appendLink(links, label + ' ↗', url)); if (links.children.length) box.append(links);
     }
     return box;
   }
   renderItems('publications', 'publicationsList', (x) => richItem(x, 'title', 'authors'));
-  renderItems('projects', 'projectsList', (x) => richItem(x, 'name', 'description'));
+  function projectItem(record) {
+    const box = el('div', 'project-content');
+    box.append(el('h3', '', record.name || 'Untitled project'));
+    if (record.tagline) box.append(el('p', 'project-tagline', record.tagline));
+    if (record.description) box.append(el('p', 'project-description', record.description));
+    const meta = el('div', 'project-meta');
+    if (Array.isArray(record.tags) && record.tags.length) {
+      const tags = el('div', 'tags');
+      record.tags.forEach((tag) => tags.append(el('span', '', tag)));
+      meta.append(tags);
+    }
+    const actions = el('div', 'entry-links');
+    appendLink(actions, 'GitHub ↗', record.url);
+    if (Array.isArray(record.links)) {
+      record.links.forEach(({label, url}) => appendLink(actions, `${label} ↗`, url));
+    }
+    if (record.stars !== undefined && record.stars !== null && String(record.stars).trim()) {
+      actions.append(el('span', 'project-stars', `★ ${record.stars}`));
+    }
+    if (actions.children.length) meta.append(actions);
+    if (meta.children.length) box.append(meta);
+    return box;
+  }
+  renderItems('projects', 'projectsList', projectItem);
   renderItems('experience', 'experienceList', (x) => richItem(x, 'role', 'organization'));
   renderItems('teaching', 'teachingList', (x) => richItem(x, 'name', 'institution'));
   renderItems('news', 'newsList', (x) => { const body = el('div'); body.append(el('p', '', x.text || '')); return body; });
