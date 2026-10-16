@@ -147,6 +147,14 @@ window.PROFILE = {
     // { period: "2017 — 2021", role: "Ph.D. in Computer Science", organization: "ETH Zürich", description: "Dissertation: Toward Transparent Transformers — feature discovery in large language models. Advisor: Prof. R. Yamashita.", kind: "education" },
     // { period: "2015 — 2017", role: "M.Sc. in Computer Science (Machine Learning)", organization: "ETH Zürich", description: "Thesis on efficient routing for mixture-of-experts models. Graduated with distinction.", kind: "education" },
    {
+     period: "2025 — Present",
+     role: "AI Team Lead",
+     organization: "Mayanext",
+     description:
+       "Leading the AI team in the research, design, and development of intelligent systems and machine learning solutions. Responsible for guiding technical architecture, coordinating AI projects, and overseeing the development and deployment of AI-powered applications, with a focus on large language models, natural language processing, and applied machine learning.",
+     kind: "position"
+   },
+   {
      period: "2021 — Present",
      role: "B.Sc. Student in Computer Engineering",
      organization: "Mazandaran University of Science and Technology",
