@@ -9,3 +9,11 @@
 @media(max-width:650px){.wrap{padding:0 22px}.site-header{height:76px}.head-right{gap:12px}.nav{gap:12px}.nav a{font-size:11px}.hero{padding:85px 0 92px}.hero h1{font-size:clamp(54px,12vw,72px)}.hero .role{font-size:18px}.hero .intro{font-size:14px}.section{display:block;padding:64px 0 75px}.section-label{padding:0;margin-bottom:27px}.section h2{font-size:41px}.research-list,.entry-list{margin-top:28px}.entry{grid-template-columns:65px minmax(0,1fr);gap:13px}.contact{padding:83px 0 87px}.contact h2{font-size:50px}.footer{font-size:10px}.footer>span:nth-child(2){display:none}}
 @media(max-width:390px){.nav a[href="#research"]{display:none}.identity{font-size:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Project metadata */
+.project-tagline{font-weight:600;color:var(--ink)!important;margin-top:6px!important}
+.project-description{margin-top:9px!important}
+.project-meta{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:12px}
+.project-meta .tags{margin-top:0}
+.project-meta .entry-links{align-items:center;margin-top:9px}
+.project-stars{font-size:12px;color:var(--muted)}
