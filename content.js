@@ -7,7 +7,7 @@
 window.PROFILE = {
   // -- Identity ---------------------------------------------------------------
   name: "Saeed Biabani Mahalli",
-  honorific: "Dr.",
+  honorific: "",
   initials: "SB",
   title: "AI & Machine Learning Researcher",
   affiliation: "Machine Learning and Computer Vision Research Lab",
