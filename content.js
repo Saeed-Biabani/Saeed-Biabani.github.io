@@ -41,14 +41,6 @@ window.PROFILE = {
   //   { label: "Students mentored", value: "14" },
   // ],
 
-  // -- Recent news (About sidebar) -------------------------------------------
-  // news: [
-  //   { date: "Jun 2025", text: "Invited talk at the ICML Workshop on Interpretability — \"What sparse autoencoders still can't see\"." },
-  //   { date: "Apr 2025", text: "Our sparse-autoencoder scaling paper was accepted to TMLR. Code & SAE checkpoints released." },
-  //   { date: "Jan 2025", text: "Two papers accepted to ICML 2025 — one on constitutional feedback, one on agent evaluations." },
-  //   { date: "Oct 2024", text: "Started co-directing the OpenArena evaluation consortium." },
-  // ],
-
   // -- Research interests -----------------------------------------------------
    researchInterests: [
      {
@@ -141,11 +133,6 @@ window.PROFILE = {
 
   // -- Experience & Education timeline ---------------------------------------
   experience: [
-    // { period: "2022 — Present", role: "Research Scientist & Group Lead, Reliable Foundations", organization: "Institute for Machine Intelligence (IMI)", description: "Lead a team of 6 researchers and 4 students working on alignment, interpretability, and evaluation of frontier models. Co-director of the open OpenArena evaluation consortium.", kind: "position" },
-    // { period: "2021 — 2022", role: "Postdoctoral Researcher", organization: "ETH Zürich, AI Center", description: "Continued work on sparse autoencoders and feature circuits; co-taught the graduate course on Reliable Machine Learning.", kind: "position" },
-    // { period: "2019 — 2020", role: "Research Resident", organization: "Frontier Alignment Lab", description: "Contributed to preference learning and red-teaming pipelines for instruction-tuned models; co-authored two workshop papers.", kind: "position" },
-    // { period: "2017 — 2021", role: "Ph.D. in Computer Science", organization: "ETH Zürich", description: "Dissertation: Toward Transparent Transformers — feature discovery in large language models. Advisor: Prof. R. Yamashita.", kind: "education" },
-    // { period: "2015 — 2017", role: "M.Sc. in Computer Science (Machine Learning)", organization: "ETH Zürich", description: "Thesis on efficient routing for mixture-of-experts models. Graduated with distinction.", kind: "education" },
    {
      period: "2025 — Present",
      role: "AI Team Lead",
