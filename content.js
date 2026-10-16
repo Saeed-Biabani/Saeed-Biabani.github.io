@@ -153,10 +153,44 @@ window.PROFILE = {
 
   // -- Open-source projects ---------------------------------------------------
   projects: [
-    { name: "sae-kit", tagline: "Train & inspect sparse autoencoders at scale", description: "A batteries-included toolkit for training sparse autoencoders on production-scale transformer activations, with first-class support for feature circuit tracing and activation steering experiments.", tags: ["PyTorch", "Interpretability", "Open Source"], url: "#", stars: "3.4k" },
-    { name: "OpenArena", tagline: "Reproducible evals for agentic models", description: "A version-pinned, sandboxed evaluation ecosystem of 320 agentic tasks. Designed so any capability claim can be independently reproduced with a single command.", tags: ["Evaluation", "Agents", "Reproducibility"], url: "#", stars: "2.1k" },
-    { name: "refusal-probe", tagline: "Geometry of refusal in instruction-tuned models", description: "Reference implementation and notebooks for probing, steering, and ablating refusal directions across model families. Reproduces all figures from our EMNLP paper.", tags: ["Probing", "Safety", "Notebooks"], url: "#", stars: "980" },
-    { name: "vh-detector", tagline: "Sub-1ms hallucination detector for VLMs", description: "An activation-based detector for object hallucinations in vision-language models, drop-in to most HF VLM generation loops.", tags: ["VLMs", "Tooling"], url: "#", stars: "640" },
+     {
+        name: "Deep Learning-Based Document Scanner",
+        tagline: "Document Detection and Extraction Using U-Net",
+        description:
+          "A deep learning-based document scanning system that uses a pretrained U-Net-like architecture for document segmentation in natural scene images. The system detects document boundaries, extracts the document region, and enhances the scanned output using image processing techniques.",
+        tags: [
+          "PyTorch",
+          "Computer Vision",
+          "U-Net",
+          "Semantic Segmentation",
+          "OpenCV"
+        ],
+        url: "https://github.com/Saeed-Biabani/Document-Scanner",
+        stars: "20"
+      },
+     {
+        name: "Persian Optical Character Recognition",
+        tagline: "Autoregressive Transformer for Persian Text Recognition",
+        description:
+          "An end-to-end Transformer-based OCR system for recognizing printed and handwritten Persian text. The architecture combines a Vision Transformer (ViT) encoder with an autoregressive Transformer decoder to generate text from input images. Trained on the Persian-OCR-230K dataset.",
+        tags: ["PyTorch", "Computer Vision", "Transformers", "OCR"],
+        url: "https://github.com/Saeed-Biabani/Optical-Character-Recognition",
+        stars: "4"
+      },
+     {
+        name: "English-to-Persian Neural Machine Translation",
+        tagline: "Transformer-Based English-to-Persian Translation",
+        description:
+          "An end-to-end neural machine translation system built with PyTorch, implementing a Transformer encoder-decoder architecture from scratch. The model incorporates multi-head attention and sinusoidal positional encoding to learn contextual representations and generate Persian translations from English text. Trained on an English-Persian daily dialogue dataset.",
+        tags: [
+          "PyTorch",
+          "Transformers",
+          "Natural Language Processing",
+          "Machine Translation"
+        ],
+        url: "https://github.com/Saeed-Biabani/Machine-Translation",
+        stars: "5"
+      },
   ],
 
   // -- Teaching ---------------------------------------------------------------
